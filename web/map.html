@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>We a Re</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Noto+Sans+KR" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <style>
+        * {
+            font-family: 'Noto Sans KR';
+        }
+
+        .navbar-brand {
+            font-family: 'Major Mono Display';
+        }
+    </style>
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <div class="row no-gutters" style="width: 100%;">
+                <div class="col-6">
+                    <a class="navbar-brand font-weight-bold text-primary" href="/dashboard.html"><img src="./static/img/logo.png" alt="로고"
+                            class="img-fluid" style="width: 60px;"></a>
+                </div>
+                <div class="col-6">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">로그인</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">회원가입</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="map"></div>
+    <script>
+        var map;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                    lat: 35.9078,
+                    lng: 127.7669
+                },
+                zoom: 8
+            });
+
+            var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+            var contentString = '<div id="content">' +
+                '<div id="siteNotice">' +
+                '</div>' +
+                '<h1 id="firstHeading" class="firstHeading">전윤민</h1>' +
+                '<div id="bodyContent">' +
+                '<p><b>전윤민</b>, 세상에 꿈을 선물하는 아티스트' +
+                '안녕하세요, IT 계열 특성화고등학교에서 디지털 콘텐츠를 전공하고, 관련 분야 경험을 쌓고 있는 19살 전윤민입니다. 어도비 프리미어, 애프터이펙트, 포토샵을 비롯한 영상 및 그래픽 스포트웨어군을 능숙하게 다룰 수 있습니다. 실무 경험을 바탕으로 누구보다 열심히 업무에 임할 준비가 되어 있습니다.</p>' +
+                '<p><a href="/profile.html">' +
+                '프로필 보기</a></p>' +
+                '</div>' +
+                '</div>';
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+
+            var markers = locations.map(function (location, i) {
+                return new google.maps.Marker({
+                    position: location,
+                    // icon: './static/img/blank_small.png'
+                    // label: labels[i % labels.length]
+                });
+            });
+
+            console.log(markers);
+
+            markers.map(function (marker, i) {
+                marker.addListener('click', function () {
+                    infowindow.open(map, marker);
+                });
+            })
+
+            var markerClusterer = new MarkerClusterer(map, markers, {
+                imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
+            });
+        }
+
+        var locations = [{
+                lat: 35.9070,
+                lng: 127.7659
+            },
+            {
+                lat: 35.9068,
+                lng: 127.7269
+            },
+            {
+                lat: 35.8978,
+                lng: 127.7669
+            },
+            {
+                lat: 35.5384,
+                lng: 127.7669
+            },
+            {
+                lat: 35.5384,
+                lng: 128.2869
+            },
+            {
+                lat: 35.5384,
+                lng: 128.2869
+            },
+            {
+                lat: 35.5384,
+                lng: 128.2869
+            },
+            {
+                lat: 35.5384,
+                lng: 128.2854
+            },
+            {
+                lat: 35.5384,
+                lng: 128.2834
+            },
+            {
+                lat: 35.5384,
+                lng: 128.2819
+            },
+            {
+                lat: 35.9078,
+                lng: 127.7669
+            },
+            {
+                lat: 35.5384,
+                lng: 127.7669
+            },
+            {
+                lat: 35.9078,
+                lng: 127.7669
+            },
+            {
+                lat: 35.9078,
+                lng: 127.7669
+            },
+            {
+                lat: 36.5565,
+                lng: 127.7669
+            },
+            {
+                lat: 37.5535,
+                lng: 127.7669
+            },
+            {
+                lat: 37.4565,
+                lng: 127.7669
+            },
+            {
+                lat: 37.4569,
+                lng: 127.7669
+            },
+            {
+                lat: 37.3691,
+                lng: 126.9784
+            },
+            {
+                lat: 37.5663,
+                lng: 126.9782
+            },
+            {
+                lat: 37.5664,
+                lng: 126.9781
+            },
+            {
+                lat: 37.5662,
+                lng: 126.9785
+            },
+            {
+                lat: 37.5665,
+                lng: 126.9783
+            }
+        ]
+    </script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoaYHxAaX2DhZTGIVoDE62kPaXgjFuZ8c&callback=initMap"
+        async defer></script>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>We A Re</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Noto+Sans+KR" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <style>
+        * {
+            font-family: 'Noto Sans KR';
+        }
+        .navbar-brand {
+            font-family: 'Major Mono Display';
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light1">
+        <div class="container">
+            <div class="row no-gutters" style="width: 100%;">
+                <div class="col-6">
+                    <a class="navbar-brand font-weight-bold text-primary" href="/dashboard.html"><img src="./static/img/logo.png"
+                            alt="로고" class="img-fluid" style="width: 60px;"></a>
+                </div>
+                <div class="col-6">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">로그인</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">회원가입</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h3 class="font-weight-bold text-center mb-3">아티스트 찾기</h3>
+        <ul class="nav mb-2">
+            <li class="nav-item">
+                <a class="nav-link" href="/search_artist.html">아티스트 찾기</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/search_project.html">프로젝트 찾기</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/map.html">지도에서 찾기</a>
+            </li>
+        </ul>
+        <form action="/search" class="mb-3">
+            <input type="text" class="form-control py-4 px-3" placeholder="검색어">
+        </form>
+        <div class="row">
+            <div class="col-12 col-lg-3">
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action active">아티스트 찾기</a>
+                    <a href="#" class="list-group-item list-group-item-action">전체</a>
+                    <a href="#" class="list-group-item list-group-item-action">디자인</a>
+                    <a href="#" class="list-group-item list-group-item-action">영상</a>
+                    <a href="#" class="list-group-item list-group-item-action">음악</a>
+                    <a href="#" class="list-group-item list-group-item-action">촬영</a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-9">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card mb-3" style="position: relative;">
+                            <p class="card-text text-white" style="position: absolute; top: 10px; left: 10px;"><i class="fas fa-map-marker-alt"></i>
+                                1.5km 떨어진 곳에서</p>
+                            <img src="./static/img/test/image15.jpg" alt="image" class="card-img-top" style="height: 200px; object-fit: cover;">
+                            <div class="card-profile">
+                                <img src="./static/img/blank.png" alt="profile" style="position: absolute; width: 50px; border-radius: 50%; left: 50%; top: 175px; transform: translateX(-50%)">
+                            </div>
+                            <div class="card-body" style="padding-top: 40px;">
+                                <h3 class="card-title text-center font-weight-bold">전윤민</h3>
+                                <p class="card-text text-justify" style="max-height: 100px; overflow: hidden;">안녕하세요,
+                                    IT 계열 특성화고등학교에서 디지털 콘텐츠를 전공하고, 관련 분야 경험을 쌓고 있는 19살 전윤민입니다. 어도비 프리미어, 애프터이펙트, 포토샵을
+                                    비롯한 영상 및 그래픽 스포트웨어군을 능숙하게 다룰 수 있습니다. 실무 경험을 바탕으로 누구보다 열심히 업무에 임할 준비가 되어 있습니다.</p>
+                                <a href="#" class="btn btn-primary">연락하기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card mb-3" style="position: relative;">
+                            <p class="card-text text-white" style="position: absolute; top: 10px; left: 10px;"><i class="fas fa-map-marker-alt"></i>
+                                2km 떨어진 곳에서</p>
+                            <img src="./static/img/test/image13.jpg" alt="image" class="card-img-top" style="height: 200px; object-fit: cover;">
+                            <div class="card-profile">
+                                <img src="./static/img/blank.png" alt="profile" style="position: absolute; width: 50px; border-radius: 50%; left: 50%; top: 175px; transform: translateX(-50%)">
+                            </div>
+                            <div class="card-body" style="padding-top: 40px;">
+                                <h3 class="card-title text-center font-weight-bold">김윤수</h3>
+                                <p class="card-text text-justify" style="max-height: 100px; overflow: hidden;">안녕하세요,
+                                    IT 계열 특성화고등학교에서 디지털 콘텐츠를 전공하고, 관련 분야 경험을 쌓고 있는 19살 전윤민입니다. 어도비 프리미어, 애프터이펙트, 포토샵을
+                                    비롯한 영상 및 그래픽 스포트웨어군을 능숙하게 다룰 수 있습니다. 실무 경험을 바탕으로 누구보다 열심히 업무에 임할 준비가 되어 있습니다.</p>
+                                <a href="#" class="btn btn-primary">연락하기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card mb-3" style="position: relative;">
+                            <p class="card-text text-white" style="position: absolute; top: 10px; left: 10px;"><i class="fas fa-map-marker-alt"></i>
+                                3.5km 떨어진 곳에서</p>
+                            <img src="./static/img/test/image11.jpg" alt="image" class="card-img-top" style="height: 200px; object-fit: cover;">
+                            <div class="card-profile">
+                                <img src="./static/img/blank.png" alt="profile" style="position: absolute; width: 50px; border-radius: 50%; left: 50%; top: 175px; transform: translateX(-50%)">
+                            </div>
+                            <div class="card-body" style="padding-top: 40px;">
+                                <h3 class="card-title text-center font-weight-bold">이원준</h3>
+                                <p class="card-text text-justify" style="max-height: 100px; overflow: hidden;">안녕하세요,
+                                    IT 계열 특성화고등학교에서 디지털 콘텐츠를 전공하고, 관련 분야 경험을 쌓고 있는 19살 전윤민입니다. 어도비 프리미어, 애프터이펙트, 포토샵을
+                                    비롯한 영상 및 그래픽 스포트웨어군을 능숙하게 다룰 수 있습니다. 실무 경험을 바탕으로 누구보다 열심히 업무에 임할 준비가 되어 있습니다.</p>
+                                <a href="#" class="btn btn-primary">연락하기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark p-5 mt-5">
+        <div class="container text-white">
+            &copy; 2017 LUNA. We R
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
